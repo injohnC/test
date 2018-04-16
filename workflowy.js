@@ -4,7 +4,7 @@ $(window).focus(updateStyle);
 function updateStyle() {
 	const dates = Array.from($('.contentTag'))
 		.map(x => x.textContent)
-		.filter(x => x.match(/^#d-\d{4}-\d{2}-\d{2}$/))
+		.filter(x => x.match(/^#d-\d{2}-\d{2}-\d{2}$/))
 		.map(x => x.substring(3))
 		.filter((v, i, a) => a.indexOf(v) === i)
 		.map(x => new Date(x));
